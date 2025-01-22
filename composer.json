@@ -12,5 +12,8 @@
             "email": "maxheong54@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "bin": [
+        "bin/brain-games"
+    ]
 }
