@@ -2,6 +2,9 @@
     "name": "hexlet/code",
     "description": "project-brain-games",
     "autoload": {
+        "files": [
+            "/home/max/Documents/Hexlet/php-project-45/src/Cli.php"
+        ],
         "psr-4": {
             "Hexlet\\Code\\": "src/"
         }
@@ -12,7 +15,9 @@
             "email": "maxheong54@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "wp-cli/php-cli-tools": "^0.12.1"
+    },
     "bin": [
         "bin/brain-games"
     ]
