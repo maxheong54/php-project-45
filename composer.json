@@ -9,7 +9,8 @@
             "/home/max/Documents/Hexlet/php-project-45/src/Engine.php",
             "/home/max/Documents/Hexlet/php-project-45/src/Games/CalcGame.php",
             "/home/max/Documents/Hexlet/php-project-45/src/Games/GcdGame.php",
-            "/home/max/Documents/Hexlet/php-project-45/src/Games/ProgressionGame.php"
+            "/home/max/Documents/Hexlet/php-project-45/src/Games/ProgressionGame.php",
+            "/home/max/Documents/Hexlet/php-project-45/src/Games/PrimeGame.php"
         ],
         "psr-4": {
             "Hexlet\\Code\\": "src/"
@@ -29,7 +30,8 @@
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
-        "bin/brain-progression"
+        "bin/brain-progression",
+        "bin/brain-prime"
     ],
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.11"
