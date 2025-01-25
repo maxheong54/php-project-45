@@ -10,5 +10,7 @@ brain-even:
 	php bin/brain-even
 brain-calc:
 	php bin/brain-calc
-comp-dump:
+dump:
 	composer dump-autoload
+brain-gcd:
+	php bin/brain-gcd
