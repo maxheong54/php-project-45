@@ -14,3 +14,5 @@ dump:
 	composer dump-autoload
 brain-gcd:
 	php bin/brain-gcd
+brain-progression:
+	php bin/brain-progression

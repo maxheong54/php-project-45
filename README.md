@@ -10,3 +10,5 @@ https://asciinema.org/a/0RFH3jY6HlOvuJLdra5uwI2hv
 
 Demonstration brain-gcd game:
  https://asciinema.org/a/RrOuyH57yU20s4yUcOqKm2dHM
+Demonstration brain-progression game:
+https://asciinema.org/a/2l4WBwuqDoxmSAwECmMEdOOrZ 
