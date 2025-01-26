@@ -4,13 +4,13 @@
     "license": "MIT",
     "autoload": {
         "files": [
-            "/home/max/Documents/Hexlet/php-project-45/src/Games/Cli.php",
-            "/home/max/Documents/Hexlet/php-project-45/src/Games/EvenGame.php",
-            "/home/max/Documents/Hexlet/php-project-45/src/Engine.php",
-            "/home/max/Documents/Hexlet/php-project-45/src/Games/CalcGame.php",
-            "/home/max/Documents/Hexlet/php-project-45/src/Games/GcdGame.php",
-            "/home/max/Documents/Hexlet/php-project-45/src/Games/ProgressionGame.php",
-            "/home/max/Documents/Hexlet/php-project-45/src/Games/PrimeGame.php"
+            "src/Games/Cli.php",
+            "src/Games/EvenGame.php",
+            "src/Engine.php",
+            "src/Games/CalcGame.php",
+            "src/Games/GcdGame.php",
+            "src/Games/ProgressionGame.php",
+            "src/Games/PrimeGame.php"
         ],
         "psr-4": {
             "Hexlet\\Code\\": "src/"
