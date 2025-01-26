@@ -6,7 +6,7 @@ use function Php\Project\Engine\runGame;
 
 function runBrainGame(): void
 {
-    $task = "What is the result of the expression?";
+    $task = 'Answer "yes" if the number is even, otherwise answer "no".';
     $gameData = function (): array {
         $answers = ['yes', 'no'];
         $question = mt_rand(1, 100);
