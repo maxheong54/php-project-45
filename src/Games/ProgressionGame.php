@@ -4,12 +4,21 @@ namespace Php\Project\Games\ProgressionGame;
 
 use function Php\Project\Engine\runGame;
 
+const GAME_RULES = 'What number is missing in the progression?';
+
 function runProgressionGame(): void
 {
-    $task = "What number is missing in the progression?";
-    $gameData = function (): array {
+    $getGameData = function (): array {
         $progreissonSize = mt_rand(5, 10);
-        $progression = generateProgression($progreissonSize);
+        $progressionStep = mt_rand(1, 10);
+        $firstNum = mt_rand(1, 50);
+
+        $progression = generateProgression(
+            $progreissonSize,
+            $progressionStep,
+            $firstNum
+        );
+
         $randIndex = mt_rand(0, $progreissonSize - 1);
         $correctAnswer = (string) $progression[$randIndex];
         $progression[$randIndex] = '..';
@@ -17,17 +26,16 @@ function runProgressionGame(): void
         return [$question, $correctAnswer];
     };
 
-    runGame($task, $gameData);
+    runGame(GAME_RULES, $getGameData);
 }
 
-function generateProgression(int $size): array
+function generateProgression(int $size, int $step, int $firstNum): array
 {
     $progression = [];
-    $progressionStep = mt_rand(1, 10);
-    $currentNum = mt_rand(1, 50);
+    $currentNum = $firstNum;
     for ($i = 0; $i < $size; $i++) {
         $progression[] = $currentNum;
-        $currentNum += $progressionStep;
+        $currentNum += $step;
     }
     return $progression;
 }

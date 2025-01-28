@@ -4,36 +4,43 @@ namespace Php\Project\Games\CalcGame;
 
 use function Php\Project\Engine\runGame;
 
+const GAME_RULES = 'What is the result of the expression?';
+
 function runCalcGame(): void
 {
-    $task = "What is the result of the expression?";
-    $gameData = function (): array {
+    $getGameData = function (): array {
         $firstOperand = mt_rand(1, 10);
         $secondOperand = mt_rand(1, 10);
         $operators = ['+', '-', '*'];
         $operatorIndex = mt_rand(0, 2);
+        $currentOperator = $operators[$operatorIndex];
 
-        $question = null;
-        $correctAnswer = null;
+        $question = "{$firstOperand} {$currentOperator} {$secondOperand}";
+        $correctAnswer = (string) calculateExpression(
+            $firstOperand,
+            $secondOperand,
+            $currentOperator
+        );
 
-        switch ($operators[$operatorIndex]) {
-            case '+':
-                $question = "$firstOperand + $secondOperand";
-                $correctAnswer = $firstOperand + $secondOperand;
-                break;
-            case '-':
-                $question = "$firstOperand - $secondOperand";
-                $correctAnswer = $firstOperand - $secondOperand;
-                break;
-            case '*':
-                $question = "$firstOperand * $secondOperand";
-                $correctAnswer = $firstOperand * $secondOperand;
-                break;
-        }
-
-        $correctAnswer = (string) $correctAnswer;
         return [$question, $correctAnswer];
     };
 
-    runGame($task, $gameData);
+    runGame(GAME_RULES, $getGameData);
+}
+
+function calculateExpression(int $firstNum, int $secondNum, string $operator): int
+{
+    $result = null;
+    switch ($operator) {
+        case '+':
+            $result = $firstNum + $secondNum;
+            break;
+        case '-':
+            $result = $firstNum - $secondNum;
+            break;
+        case '*':
+            $result = $firstNum * $secondNum;
+            break;
+    }
+    return $result;
 }
