@@ -12,7 +12,7 @@ function runCalcGame(): void
         $firstOperand = mt_rand(1, 10);
         $secondOperand = mt_rand(1, 10);
         $operators = ['+', '-', '*'];
-        $operatorIndex = mt_rand(0, 2);
+        $operatorIndex = array_rand($operators, 1);
         $currentOperator = $operators[$operatorIndex];
 
         $question = "{$firstOperand} {$currentOperator} {$secondOperand}";
